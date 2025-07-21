@@ -238,6 +238,493 @@
   </table>
 
   <script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva Odontología</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdf8ff;
+      padding: 2rem;
+      color: #333;
+    }
+    h2 {
+      color: #783f8e;
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #e3d6f4;
+      color: #4b2963;
+    }
+    .ramo {
+      background-color: #e7f0fa;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .aprobado {
+      background-color: #f7c0d7 !important;
+      text-decoration: line-through;
+    }
+    .bloqueado {
+      background-color: #eee !important;
+      color: #999;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Interactiva – Odontología</h1>
+  <button onclick="reiniciarMalla()" style="margin: 1rem 0; padding: 0.6rem 1.2rem; font-size: 1rem; background-color: #d887b8; color: white; border: none; border-radius: 8px; cursor: pointer;">
+  Reiniciar Malla
+</button>
+
+
+  <!-- Año 1 -->
+  <h2>Año 1</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 1</th>
+        <th>Semestre 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="ramo">ANATOMÍA HUMANA</div>
+          <div class="ramo">BIOLOGÍA MOLECULAR Y GENÉTICA</div>
+          <div class="ramo">QUÍMICA Y BIOQUÍMICA</div>
+          <div class="ramo">BIENESTAR, AUTOCUIDADO Y ESTILOS DE VIDA</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA I</div>
+        </td>
+        <td>
+          <div class="ramo">ANATOMÍA BUCOMAXILOFACIAL</div>
+          <div class="ramo">BIOQUÍMICA Y MICROBIOLOGÍA CLÍNICA</div>
+          <div class="ramo">HISTOLOGÍA GENERAL Y ORAL</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA II</div>
+          <div class="ramo">ELECTIVO 1 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 2 -->
+  <h2>Año 2</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 3</th>
+        <th>Semestre 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="ramo">SALUD BASADA EN LA EVIDENCIA</div>
+          <div class="ramo">FISIOLOGÍA GENERAL Y ORAL I</div>
+          <div class="ramo">IMAGENOLOGÍA ORAL Y MAXILOFACIAL I</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA III</div>
+          <div class="ramo">PERIODONCIA Y ENDODONCIA I</div>
+          <div class="ramo">ELECTIVO 2 ODONTOLOGÍA</div>
+        </td>
+        <td>
+          <div class="ramo">FISIOLOGÍA GENERAL Y ORAL II</div>
+          <div class="ramo">PATOLOGÍA E INMUNOLOGÍA GENERAL</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA IV</div>
+          <div class="ramo">IMAGENOLOGÍA ORAL Y MAXILOFACIAL II</div>
+          <div class="ramo">FARMACOLOGÍA</div>
+          <div class="ramo">PERIODONCIA Y ENDODONCIA II</div>
+          <div class="ramo">ELECTIVO 3 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 3 -->
+  <h2>Año 3</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 5</th>
+        <th>Semestre 6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA I</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">PSICOLOGÍA PARA LA ATENCIÓN EN SALUD</div>                                             
+          <div class="ramo">PATOLOGÍA ORAL I</div>
+          <div class="ramo">TRASTORNOS TEMPORO MANDIBULARES Y OCLUSIÓN I</div>
+          <div class="ramo">SEMIOLOGÍA Y ANESTESIOLOGÍA</div>
+          <div class="ramo">CARIOLOGÍA CLÍNICA</div>
+          <div class="ramo">ELECTIVO 4 ODONTOLOGÍA</div>
+          
+        </td>
+        <td>
+          <div class="ramo">ODONTOLOGÍA BASADA EN LA EVIDENCIA Y SALUD DIGITAL</div>
+          <div class="ramo">PATOLOGÍA ORAL II</div>
+          <div class="ramo">TRASTORNOS TEMPORO MANDIBULARES Y OCLUSIÓN II</div>
+          <div class="ramo">CIRUGÍA ORAL I</div>
+          <div class="ramo">CALIDAD, SEGURIDAD Y ACREDITACIÓN EN ODONTOLOGÍA</div>
+          <div class="ramo">ELECTIVO 5 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 4 -->
+  <h2>Año 4</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 7</th>
+        <th>Semestre 8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA II</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL NIÑO Y ORTODONCIA I</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">BIOÉTICA</div>
+          <div class="ramo">INTELIGENCIA ARTIFICIAL APLICADA A LA SALUD</div>
+          <div class="ramo">ODONTOLOGÍA LEGAL Y FORENSE</div>
+          <div class="ramo">CIRUGÍA ORAL II</div>
+        </td>
+        <td>
+          <div class="ramo">SALUD PÚBLICA Y EPIDEMIOLOGÍA</div>
+          <div class="ramo">ATENCIÓN DE PERSONAS CON NECESIDADES ESPECIALES Y CUIDADOS PALIATIVOS</div>
+          <div class="ramo">CIRUGÍA ORAL III</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 5 -->
+  <h2>Año 5</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 9</th>
+        <th>Semestre 10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA III</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL NIÑO Y ORTODONCIA II</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">MEDICINA ORAL Y URGENCIA ODONTOLÓGICA I</div>
+          <div class="ramo">GESTIÓN EN SISTEMAS DE SALUD</div>
+          <div class="ramo">MÉTODOS DE INVESTIGACIÓN EN SALUD Y BIOESTADÍSTICA APLICADA</div>
+        </td>
+        <td>
+          <div class="ramo">MEDICINA ORAL Y URGENCIA ODONTOLOGÍA II</div>
+          <div class="ramo">ATENCIÓN PRIMARIA DE SALUD Y ODONTOLOGÍA</div>
+          <div class="ramo">TRABAJO DE INVESTIGACIÓN</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 6 -->
+  <h2>Año 6</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 11</th>
+        <th>Semestre 12</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">INTERNADO ASISTENCIAL DOCENTE</div>
+          <div class="ramo">CURSO DE INFECCIONES ASOCIADAS A ATENCIÓN DE SALUD</div>
+          <div class="ramo">CURSO DE PROTECCIÓN RADIOLÓGICA</div>
+          <div class="ramo">GESTIÓN DE EMPRENDIMIENTO Y ACCOUNTABILITY EN ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva Odontología</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdf8ff;
+      padding: 2rem;
+      color: #333;
+    }
+    h2 {
+      color: #783f8e;
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #e3d6f4;
+      color: #4b2963;
+    }
+    .ramo {
+      background-color: #e7f0fa;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .aprobado {
+      background-color: #f7c0d7 !important;
+      text-decoration: line-through;
+    }
+    .bloqueado {
+      background-color: #eee !important;
+      color: #999;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Interactiva – Odontología</h1>
+  <button onclick="reiniciarMalla()" style="margin: 1rem 0; padding: 0.6rem 1.2rem; font-size: 1rem; background-color: #d887b8; color: white; border: none; border-radius: 8px; cursor: pointer;">
+  Reiniciar Malla
+</button>
+
+
+  <!-- Año 1 -->
+  <h2>Año 1</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 1</th>
+        <th>Semestre 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="ramo">ANATOMÍA HUMANA</div>
+          <div class="ramo">BIOLOGÍA MOLECULAR Y GENÉTICA</div>
+          <div class="ramo">QUÍMICA Y BIOQUÍMICA</div>
+          <div class="ramo">BIENESTAR, AUTOCUIDADO Y ESTILOS DE VIDA</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA I</div>
+        </td>
+        <td>
+          <div class="ramo">ANATOMÍA BUCOMAXILOFACIAL</div>
+          <div class="ramo">BIOQUÍMICA Y MICROBIOLOGÍA CLÍNICA</div>
+          <div class="ramo">HISTOLOGÍA GENERAL Y ORAL</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA II</div>
+          <div class="ramo">ELECTIVO 1 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 2 -->
+  <h2>Año 2</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 3</th>
+        <th>Semestre 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="ramo">SALUD BASADA EN LA EVIDENCIA</div>
+          <div class="ramo">FISIOLOGÍA GENERAL Y ORAL I</div>
+          <div class="ramo">IMAGENOLOGÍA ORAL Y MAXILOFACIAL I</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA III</div>
+          <div class="ramo">PERIODONCIA Y ENDODONCIA I</div>
+          <div class="ramo">ELECTIVO 2 ODONTOLOGÍA</div>
+        </td>
+        <td>
+          <div class="ramo">FISIOLOGÍA GENERAL Y ORAL II</div>
+          <div class="ramo">PATOLOGÍA E INMUNOLOGÍA GENERAL</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRADA IV</div>
+          <div class="ramo">IMAGENOLOGÍA ORAL Y MAXILOFACIAL II</div>
+          <div class="ramo">FARMACOLOGÍA</div>
+          <div class="ramo">PERIODONCIA Y ENDODONCIA II</div>
+          <div class="ramo">ELECTIVO 3 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 3 -->
+  <h2>Año 3</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 5</th>
+        <th>Semestre 6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA I</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">PSICOLOGÍA PARA LA ATENCIÓN EN SALUD</div>                                             
+          <div class="ramo">PATOLOGÍA ORAL I</div>
+          <div class="ramo">TRASTORNOS TEMPORO MANDIBULARES Y OCLUSIÓN I</div>
+          <div class="ramo">SEMIOLOGÍA Y ANESTESIOLOGÍA</div>
+          <div class="ramo">CARIOLOGÍA CLÍNICA</div>
+          <div class="ramo">ELECTIVO 4 ODONTOLOGÍA</div>
+          
+        </td>
+        <td>
+          <div class="ramo">ODONTOLOGÍA BASADA EN LA EVIDENCIA Y SALUD DIGITAL</div>
+          <div class="ramo">PATOLOGÍA ORAL II</div>
+          <div class="ramo">TRASTORNOS TEMPORO MANDIBULARES Y OCLUSIÓN II</div>
+          <div class="ramo">CIRUGÍA ORAL I</div>
+          <div class="ramo">CALIDAD, SEGURIDAD Y ACREDITACIÓN EN ODONTOLOGÍA</div>
+          <div class="ramo">ELECTIVO 5 ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 4 -->
+  <h2>Año 4</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 7</th>
+        <th>Semestre 8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA II</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL NIÑO Y ORTODONCIA I</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">BIOÉTICA</div>
+          <div class="ramo">INTELIGENCIA ARTIFICIAL APLICADA A LA SALUD</div>
+          <div class="ramo">ODONTOLOGÍA LEGAL Y FORENSE</div>
+          <div class="ramo">CIRUGÍA ORAL II</div>
+        </td>
+        <td>
+          <div class="ramo">SALUD PÚBLICA Y EPIDEMIOLOGÍA</div>
+          <div class="ramo">ATENCIÓN DE PERSONAS CON NECESIDADES ESPECIALES Y CUIDADOS PALIATIVOS</div>
+          <div class="ramo">CIRUGÍA ORAL III</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 5 -->
+  <h2>Año 5</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 9</th>
+        <th>Semestre 10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL ADULTO Y ODONTOGERIATRÍA III</div>
+          <div class="ramo">ODONTOLOGÍA INTEGRAL DEL NIÑO Y ORTODONCIA II</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ramo">MEDICINA ORAL Y URGENCIA ODONTOLÓGICA I</div>
+          <div class="ramo">GESTIÓN EN SISTEMAS DE SALUD</div>
+          <div class="ramo">MÉTODOS DE INVESTIGACIÓN EN SALUD Y BIOESTADÍSTICA APLICADA</div>
+        </td>
+        <td>
+          <div class="ramo">MEDICINA ORAL Y URGENCIA ODONTOLOGÍA II</div>
+          <div class="ramo">ATENCIÓN PRIMARIA DE SALUD Y ODONTOLOGÍA</div>
+          <div class="ramo">TRABAJO DE INVESTIGACIÓN</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Año 6 -->
+  <h2>Año 6</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semestre 11</th>
+        <th>Semestre 12</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div class="ramo">INTERNADO ASISTENCIAL DOCENTE</div>
+          <div class="ramo">CURSO DE INFECCIONES ASOCIADAS A ATENCIÓN DE SALUD</div>
+          <div class="ramo">CURSO DE PROTECCIÓN RADIOLÓGICA</div>
+          <div class="ramo">GESTIÓN DE EMPRENDIMIENTO Y ACCOUNTABILITY EN ODONTOLOGÍA</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const ramos = document.querySelectoALL(".ramo");
+
+      ramos.forEach (ramo => {
+        ramo.dataset.nombre = ramo.textContent.trim();
+      });
+      
     const ramosData = {
   // Año 1 - Semestre 1
   "ANATOMÍA HUMANA": [],
@@ -340,7 +827,7 @@ actualizarEstado();
 function actualizarEstado() {
   const aprobados = getAprobados();
 
-  // Guardar los ramos aprobados en localStorage
+
   localStorage.setItem("ramosAprobados", JSON.stringify(aprobados));
 
   ramos.forEach(ramo => {
@@ -375,4 +862,4 @@ function reiniciarMalla() {
 }
 </script>
 </body>
-</html>
+</html> 
