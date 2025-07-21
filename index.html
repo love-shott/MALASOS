@@ -325,73 +325,7 @@
   "LICENCIATURA (11 y 12)": []
 };
 
-    const ramos = document.querySelectorAll('.ramo');
-    ramos.forEach(ramo => {
-      ramo.dataset.nombre = ramo.textContent.trim();
-    });
-
-    function getAprobados() {
-      return Array.from(document.querySelectorAll('.ramo.aprobado'))
-        .map(r => r.dataset.nombre);
-    }
-
-    function estaDesbloqueado(nombre, aprobados) {
-      const prerequisitos = ramosData[nombre] || [];
-      return prerequisitos.every(req => aprobados.includes(req));
-    }
-
-    function actualizarEstado() {
-      const aprobados = getAprobados();
-      };
-
-    const ramos = document.querySelectorAll('.ramo');
-    ramos.forEach(ramo => {
-      ramo.dataset.nombre = ramo.textContent.trim();
-    });
-
-    function getAprobados() {
-      return Array.from(document.querySelectorAll('.ramo.aprobado'))
-        .map(r => r.dataset.nombre);
-    }
-
-    function estaDesbloqueado(nombre, aprobados) {
-      const prerequisitos = ramosData[nombre] || [];
-      return prerequisitos.every(req => aprobados.includes(req));
-    }
-
-    function actualizarEstado() {
-      const aprobados = getAprobados();
-      };
-
-    const ramos = document.querySelectorAll('.ramo');
-    ramos.forEach(ramo => {
-      ramo.dataset.nombre = ramo.textContent.trim();
-    });
-
-    function getAprobados() {
-      return Array.from(document.querySelectorAll('.ramo.aprobado'))
-        .map(r => r.dataset.nombre);
-    }
-
-    function estaDesbloqueado(nombre, aprobados) {
-      const prerequisitos = ramosData[nombre] || [];
-      return prerequisitos.every(req => aprobados.includes(req));
-    }
-
-    function actualizarEstado() {
-      const aprobados = getAprobados();
-      ramos.forEach(ramo => {
-        const nombre = ramo.dataset.nombre;
-        if (!estaDesbloqueado(nombre, aprobados)) {
-          ramo.classList.add('bloqueado');
-          ramo.classList.remove('aprobado');
-        } else {
-          ramo.classList.remove('bloqueado');
-        }
-      });
-    }
-
-    ramos.forEach(ramo => {
+ramos.forEach(ramo => {
   ramo.addEventListener('click', () => {
     if (!ramo.classList.contains('bloqueado')) {
       ramo.classList.toggle('aprobado');
@@ -400,11 +334,27 @@
   });
 });
 
-    cargarEstadoGuardado();
-    actualizarEstado();
+cargarEstadoGuardado();
+actualizarEstado();
 
-    actualizarEstado();
-  function cargarEstadoGuardado() {
+function actualizarEstado() {
+  const aprobados = getAprobados();
+
+  // Guardar los ramos aprobados en localStorage
+  localStorage.setItem("ramosAprobados", JSON.stringify(aprobados));
+
+  ramos.forEach(ramo => {
+    const nombre = ramo.dataset.nombre;
+    if (!estaDesbloqueado(nombre, aprobados)) {
+      ramo.classList.add('bloqueado');
+      ramo.classList.remove('aprobado');
+    } else {
+      ramo.classList.remove('bloqueado');
+    }
+  });
+}
+
+function cargarEstadoGuardado() {
   const guardados = JSON.parse(localStorage.getItem("ramosAprobados")) || [];
   ramos.forEach(ramo => {
     const nombre = ramo.dataset.nombre;
@@ -423,6 +373,7 @@ function reiniciarMalla() {
     actualizarEstado();
   }
 }
+
 </script>
 </body>
 </html>
