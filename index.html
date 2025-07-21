@@ -400,39 +400,8 @@
   });
 });
 
+    cargarEstadoGuardado();
     actualizarEstado();
-  function cargarEstadoGuardado() {
-  const guardados = JSON.parse(localStorage.getItem("ramosAprobados")) || [];
-  ramos.forEach(ramo => {
-    const nombre = ramo.dataset.nombre;
-    if (guardados.includes(nombre)) {
-      ramo.classList.add("aprobado");
-    }
-  });
-}
-
-function reiniciarMalla() {
-  if (confirm("¿Estás segura/o de que quieres reiniciar la malla? Se borrarán todos los ramos aprobados.")) {
-    localStorage.removeItem("ramosAprobados");
-    ramos.forEach(ramo => {
-      ramo.classList.remove("aprobado");
-    });
-    actualizarEstado();
-  }
-}
-</script>
-</body>
-</html>
-
-
-    ramos.forEach(ramo => {
-  ramo.addEventListener('click', () => {
-    if (!ramo.classList.contains('bloqueado')) {
-      ramo.classList.toggle('aprobado');
-      actualizarEstado();
-    }
-  });
-});
 
     actualizarEstado();
   function cargarEstadoGuardado() {
