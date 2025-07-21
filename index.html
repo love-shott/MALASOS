@@ -342,6 +342,44 @@
 
     function actualizarEstado() {
       const aprobados = getAprobados();
+      };
+
+    const ramos = document.querySelectorAll('.ramo');
+    ramos.forEach(ramo => {
+      ramo.dataset.nombre = ramo.textContent.trim();
+    });
+
+    function getAprobados() {
+      return Array.from(document.querySelectorAll('.ramo.aprobado'))
+        .map(r => r.dataset.nombre);
+    }
+
+    function estaDesbloqueado(nombre, aprobados) {
+      const prerequisitos = ramosData[nombre] || [];
+      return prerequisitos.every(req => aprobados.includes(req));
+    }
+
+    function actualizarEstado() {
+      const aprobados = getAprobados();
+      };
+
+    const ramos = document.querySelectorAll('.ramo');
+    ramos.forEach(ramo => {
+      ramo.dataset.nombre = ramo.textContent.trim();
+    });
+
+    function getAprobados() {
+      return Array.from(document.querySelectorAll('.ramo.aprobado'))
+        .map(r => r.dataset.nombre);
+    }
+
+    function estaDesbloqueado(nombre, aprobados) {
+      const prerequisitos = ramosData[nombre] || [];
+      return prerequisitos.every(req => aprobados.includes(req));
+    }
+
+    function actualizarEstado() {
+      const aprobados = getAprobados();
       ramos.forEach(ramo => {
         const nombre = ramo.dataset.nombre;
         if (!estaDesbloqueado(nombre, aprobados)) {
@@ -386,3 +424,36 @@ function reiniciarMalla() {
 </body>
 </html>
 
+
+    ramos.forEach(ramo => {
+  ramo.addEventListener('click', () => {
+    if (!ramo.classList.contains('bloqueado')) {
+      ramo.classList.toggle('aprobado');
+      actualizarEstado();
+    }
+  });
+});
+
+    actualizarEstado();
+  function cargarEstadoGuardado() {
+  const guardados = JSON.parse(localStorage.getItem("ramosAprobados")) || [];
+  ramos.forEach(ramo => {
+    const nombre = ramo.dataset.nombre;
+    if (guardados.includes(nombre)) {
+      ramo.classList.add("aprobado");
+    }
+  });
+}
+
+function reiniciarMalla() {
+  if (confirm("¿Estás segura/o de que quieres reiniciar la malla? Se borrarán todos los ramos aprobados.")) {
+    localStorage.removeItem("ramosAprobados");
+    ramos.forEach(ramo => {
+      ramo.classList.remove("aprobado");
+    });
+    actualizarEstado();
+  }
+}
+</script>
+</body>
+</html>
